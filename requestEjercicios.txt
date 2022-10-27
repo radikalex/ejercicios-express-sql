@@ -1,0 +1,3 @@
+Request hechas desde postman para los ejercicios
+
+- Ejercicio 2:
