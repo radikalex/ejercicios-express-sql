@@ -1,0 +1,26 @@
+Requests made from Postman for the exercises of https://docs.google.com/document/d/1zEQgHorga9eREjseKRK5gXoi1kS8I7wTpVQFpGbo_kY/edit#heading=h.shzdanlosszl
+- Exercise 1:
+    GET http://localhost:3000/createdb (Create the database)
+    GET http://localhost:3000/createtableCategories (Create Categories Table)
+    GET http://localhost:3000/createtableProducts (Create ProductsTable)
+
+- Exercise 2:
+    POST http://localhost:3000/categories/  body:{"idCategories": 1, "name": "Anime Manga"} (Create first category)
+    POST http://localhost:3000/categories/  body:{"idCategories": 2, "name": "Videogames"} (Create second category)
+    POST http://localhost:3000/products/  body:{"idProducts": 1, "name": "One Piece", "price": 6.25, "id_category": 1} (Create first product)
+    POST http://localhost:3000/products/  body:{"idProducts": 2, "name": "God of War", "price": 59.99, "id_category": 2} (Create second product)
+
+- Exercise 3:
+    PUT http://localhost:3000/products/id/1 body: {"name": "Bleach",  "price": 5.5,  "id_category": 1}
+    PUT http://localhost:3000/categories/id/1 body: {"name": "Japanese Animation"}
+
+- Exercise 4:
+    GET http://localhost:3000/products/
+    GET http://localhost:3000/categories/
+    GET http://localhost:3000/products/products_categories/
+    GET http://localhost:3000/products/id/1
+    GET http://localhost:3000/products/price_desc/
+    GET http://localhost:3000/categories/id/1
+    GET http://localhost:3000/products/name/God of War
+    DELETE http://localhost:3000/products/id/1
+    

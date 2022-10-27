@@ -11,7 +11,7 @@ app.get('/createdb', (req, res) => {
     let sql = 'CREATE DATABASE express_sql_DB';
     db.query(sql, (err, result) => {
         if (err) throw err;
-        console.log(result);
+
         res.send('Database created...')
     })
 });
@@ -21,7 +21,6 @@ app.get("/createtableCategories", (req, res) => {
         "CREATE TABLE categories ( idCategories INT, name VARCHAR(45), PRIMARY KEY (idCategories))";
     db.query(sql, (err, result) => {
         if (err) throw err;
-        console.log(result);
         res.send("Categories table created...");
     });
 });
@@ -31,7 +30,6 @@ app.get("/createtableProducts", (req, res) => {
         "CREATE TABLE products (idProducts INT, name VARCHAR(45), price FLOAT, id_category INT, PRIMARY KEY (idProducts), FOREIGN KEY (id_category) REFERENCES categories (idCategories))";
     db.query(sql, (err, result) => {
         if (err) throw err;
-        console.log(result);
         res.send("Products table created...");
     });
 });
