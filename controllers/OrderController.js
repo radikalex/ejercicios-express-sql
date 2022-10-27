@@ -2,7 +2,6 @@ const db = require('../config/database.js');
 
 const OrderController = {
     createOrder(req, res) {
-        console.log(req.body);
         let sql = `INSERT INTO orders values
               ('${req.body.idOrders}', '${req.body.date}', '${req.body.id_users}');`;
         let sql2 = `INSERT INTO orders_products values`;

@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const OrderController = require('../controllers/OrderController')
 const checkIfBodyParamsExist = require('../middlewares/checkIfBodyParamsExist')
-const checkIfElementExistsByParam = require('../middlewares/checkIfElementExistsByParam')
 const checkIfIdAvalaible = require('../middlewares/checkIfIdAvalaible')
 
 router.use(express.json());
