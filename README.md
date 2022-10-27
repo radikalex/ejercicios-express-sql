@@ -32,7 +32,7 @@ npm start
 ```
 ### Recommendations
 1. Create the tables in this order: Categories, Products, Users, Orders and Orders_Products.
-2. You can see some example of requests in [requestsExercises.txt](https://github.com/radikalex/ejercicios-express-sql/blob/main/requestsExercises.txt)
+2. You can see some examples of requests in [requestsExercises.txt](https://github.com/radikalex/ejercicios-express-sql/blob/main/requestsExercises.txt)
 
 
 😊Made by [Alex Jiménez](https://github.com/radikalex)😊
