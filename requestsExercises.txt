@@ -11,16 +11,38 @@ Requests made from Postman for the exercises of https://docs.google.com/document
     POST http://localhost:3000/products/  body:{"idProducts": 2, "name": "God of War", "price": 59.99, "id_category": 2} (Create second product)
 
 - Exercise 3:
-    PUT http://localhost:3000/products/id/1 body: {"name": "Bleach",  "price": 5.5,  "id_category": 1}
-    PUT http://localhost:3000/categories/id/1 body: {"name": "Japanese Animation"}
+    PUT http://localhost:3000/products/id/1 body: {"name": "Bleach",  "price": 5.5,  "id_category": 1} (Update product with id 1)
+    PUT http://localhost:3000/categories/id/1 body: {"name": "Japanese Animation"} (Update category with id 1)
 
 - Exercise 4:
-    GET http://localhost:3000/products/
-    GET http://localhost:3000/categories/
-    GET http://localhost:3000/products/products_categories/
-    GET http://localhost:3000/products/id/1
-    GET http://localhost:3000/products/price_desc/
-    GET http://localhost:3000/categories/id/1
-    GET http://localhost:3000/products/name/God of War
-    DELETE http://localhost:3000/products/id/1
-    
+    GET http://localhost:3000/products/ (Get all products)
+    GET http://localhost:3000/categories/ (Get all categories)
+    GET http://localhost:3000/products/products_categories/ (Get products with their categories)
+    GET http://localhost:3000/products/id/1 (Get product with id 1)
+    GET http://localhost:3000/products/price_desc/ (Get products sorted by descending price)
+    GET http://localhost:3000/categories/id/1 (Get category with id 1)
+    GET http://localhost:3000/products/name/God of War (Get product with name God of War)
+    DELETE http://localhost:3000/products/id/1 (Delete product with id 1)
+
+~~~~ Extra exercises ~~~~
+
+- Exercise 1:
+    GET http://localhost:3000/createtableUsers (Create Users Table)
+    GET http://localhost:3000/createtableOrders (Create Orders Table)
+    GET http://localhost:3000/createtableOrdersProducts (Create Orders_Products Table)
+
+- Exercies 2:
+    POST http://localhost:3000/users/ body:{ "idUsers": 1, "name": "Alex"} (Create first user)   
+    POST http://localhost:3000/users/ body:{ "idUsers": 2, "name": "Ivan"} (Create second user)   
+    POST http://localhost:3000/orders/ body: {"idOrders": 1, "date": "2022-10-3", "id_users": 2, "products": [[1,2]]} (Create first order) (products is used to insert into orders_products table)
+    POST http://localhost:3000/orders/ body: {"idOrders": 2, "date": "2022-9-10", "id_users": 1, "products": [[2,2],[1,2]]} (Create second order) (products is used to insert into orders_products table)
+
+- Exercise 3:
+    PUT http://localhost:3000/users/id/2 body: {"name": "Maxim"} (Update user with id 2)
+
+- Exercise 4:
+    GET http://localhost:3000/users/ (Get all users)
+    GET http://localhost:3000/orders/ (Get all orders with details)
+    GET http://localhost:3000/users/details (Get users with orders. If a user does not have any order, it will not be shown)
+    GET http://localhost:3000/users/id/1 (Get user with id 1)
+    DELETE http://localhost:3000/users/id/1 (Delete user with id 1)
